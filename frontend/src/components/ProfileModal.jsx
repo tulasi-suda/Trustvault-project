@@ -156,7 +156,7 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
               )}
 
               <div className="form-group">
-                <label className="form-label">Email Address (Immutable)</label>
+                <label className="form-label">Email Address (Non-changeable)</label>
                 <input
                   type="email"
                   className="form-input"
