@@ -1,6 +1,7 @@
 // Application entry point: starts server and serves frontend in production
 const path = require('path');
 const fs = require('fs');
+const express = require('express');
 const app = require('./app');
 
 const PORT = parseInt(process.env.PORT || '5000', 10);
