@@ -1,13 +1,13 @@
 // Application entry point: starts server and serves frontend in production
 const path = require('path');
-const express = require('express');
+const fs = require('fs');
 const app = require('./app');
 
 const PORT = parseInt(process.env.PORT || '5000', 10);
 
-// In production, Express serves frontend/dist and returns index.html for non-/api routes
-if (process.env.NODE_ENV === 'production') {
-  const distPath = path.join(__dirname, '../../frontend/dist');
+// In production or whenever frontend/dist exists, Express serves static assets
+const distPath = path.join(__dirname, '../../frontend/dist');
+if (process.env.NODE_ENV === 'production' || fs.existsSync(distPath)) {
   app.use(express.static(distPath));
 
   app.get('*', (req, res, next) => {
