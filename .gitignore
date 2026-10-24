@@ -16,8 +16,8 @@ backend/.env.*
 !backend/.env.example
 
 # Storage directory for local disk uploads
-backend/storage/
-storage/
+/backend/storage/
+/storage/
 
 # Logs and test artifacts
 *.log
