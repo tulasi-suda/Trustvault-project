@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build artifacts
+dist/
+frontend/dist/
+
+# Environment variables and secrets (Never commit secrets!)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Storage directory for local disk uploads
+backend/storage/
+storage/
+
+# Logs and test artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+coverage/
+.system_generated/
+
+# OS metadata
+.DS_Store
+Thumbs.db
