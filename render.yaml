@@ -31,7 +31,7 @@ services:
       - key: RENDER_EXTERNAL_URL
         fromService:
           type: web
-          name: trustvault-web
+          name: trustvault
           property: host
 
 databases:
