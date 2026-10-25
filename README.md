@@ -150,3 +150,20 @@ The following items were identified during design and intentionally left for fut
 - **Asynchronous Antivirus Scanning**: Real-time ClamAV pipeline integration for uploaded binaries.
 - **Hardware Security Module (HSM) Key Signing**: Audit log hash anchoring against external verifiable timestamp authorities (RFC 3161).
 - **Time-bound Access Grants**: Expiring grants that automatically lapse after a set duration.
+
+---
+
+## 👥 Demo Accounts
+
+| Role  | Login / Email          | Password         | Capabilities |
+|-------|------------------------|------------------|--------------|
+| **Admin** | `admin@trustvault.local` | `AdminPass123!` | Audit log integrity, user management (no document access) |
+| **User**  | `user1@trustvault.local` | `User@123456789` | Upload, share, download, and manage own documents |
+
+---
+
+## 📑 Security & AI Documentation
+
+- **[PROMPTS.md](file:///c:/Users/DELL/OneDrive/Desktop/Tulasi%20suda/PROMPTS.md)**: Comprehensive evidence of how AI was directed, critical flaws caught by human review (race conditions, timing attacks, 403 vs 404 information leakage, admin overreach), and validation proofs.
+- **[THREATS.md](file:///c:/Users/DELL/OneDrive/Desktop/Tulasi%20suda/THREATS.md)**: Catalog of 25+ verified security mitigations, threat model, automated test proofs, and accepted risks.
+- **[API.md](file:///c:/Users/DELL/OneDrive/Desktop/Tulasi%20suda/docs/API.md)**: Full REST API specification and status code documentation.
