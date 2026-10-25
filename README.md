@@ -153,12 +153,13 @@ The following items were identified during design and intentionally left for fut
 
 ---
 
-## 👥 Demo Accounts
+## 👥 Demo accounts
 
-| Role  | Login / Email          | Password         | Capabilities |
-|-------|------------------------|------------------|--------------|
-| **Admin** | `admin@trustvault.local` | `AdminPass123!` | Audit log integrity, user management (no document access) |
-| **User**  | `user1@trustvault.local` | `User@123456789` | Upload, share, download, and manage own documents |
+| Role            | Login                   | Password             |
+|-----------------|-------------------------|----------------------|
+| Admin           | `admin@gmail.com`       | `Admin123456789`     |
+| Tulasi_suda     | `23jr1a4490@gmail.com`  | `t123456789`         | 
+| User1           | `user1@gmail.com`       | `User123456789`      | 
 
 ---
 
