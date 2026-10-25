@@ -1,7 +1,7 @@
 # Render deployment specification for TrustVault
 services:
   - type: web
-    name: trustvault-web
+    name: trustvault
     env: node
     plan: free
     region: oregon
