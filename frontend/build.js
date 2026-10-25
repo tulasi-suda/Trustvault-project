@@ -14,10 +14,8 @@ if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-// 1. Copy index.css to dist
-fs.copyFileSync(path.join(__dirname, 'src/index.css'), path.join(distDir, 'index.css'));
+import http from 'http';
 
-// 2. Generate dist/index.html
 const htmlContent = `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,7 +35,12 @@ const htmlContent = `<!DOCTYPE html>
   </body>
 </html>`;
 
-fs.writeFileSync(path.join(distDir, 'index.html'), htmlContent);
+function copyStaticAssets() {
+  fs.copyFileSync(path.join(__dirname, 'src/index.css'), path.join(distDir, 'index.css'));
+  fs.writeFileSync(path.join(distDir, 'index.html'), htmlContent);
+}
+
+copyStaticAssets();
 
 const buildOptions = {
   entryPoints: [path.join(__dirname, 'src/main.jsx')],
@@ -50,15 +53,93 @@ const buildOptions = {
     '.jsx': 'jsx',
   },
   define: {
-    'process.env.NODE_ENV': '"production"',
+    'process.env.NODE_ENV': '"development"',
   },
 };
 
 if (isWatch) {
+  // Watch CSS file changes as well
+  fs.watch(path.join(__dirname, 'src/index.css'), () => {
+    try {
+      copyStaticAssets();
+      console.log('  [watch] Updated index.css');
+    } catch (_) {}
+  });
+
   const ctx = await esbuild.context(buildOptions);
   await ctx.watch();
-  console.log('Watching for changes with esbuild...');
+
+  // Create local development server with API proxy to port 5000
+  const DEV_PORT = 5173;
+  const BACKEND_PORT = 5000;
+
+  const server = http.createServer((req, res) => {
+    // Proxy /api requests to Express backend
+    if (req.url && req.url.startsWith('/api')) {
+      const proxyReq = http.request(
+        {
+          hostname: '127.0.0.1',
+          port: BACKEND_PORT,
+          path: req.url,
+          method: req.method,
+          headers: {
+            ...req.headers,
+            host: `127.0.0.1:${BACKEND_PORT}`,
+          },
+        },
+        (proxyRes) => {
+          res.writeHead(proxyRes.statusCode || 500, proxyRes.headers);
+          proxyRes.pipe(res);
+        }
+      );
+
+      proxyReq.on('error', () => {
+        res.writeHead(502, { 'Content-Type': 'application/json' });
+        res.end(
+          JSON.stringify({
+            error: `Backend at http://localhost:${BACKEND_PORT} is not reachable. Ensure the backend server is running via 'npm run dev' in the backend directory.`,
+          })
+        );
+      });
+
+      req.pipe(proxyReq);
+      return;
+    }
+
+    // Serve static files from distDir
+    let cleanUrl = (req.url || '/').split('?')[0];
+    if (cleanUrl === '/') cleanUrl = '/index.html';
+
+    let filePath = path.join(distDir, cleanUrl);
+    if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+      filePath = path.join(distDir, 'index.html');
+    }
+
+    const ext = path.extname(filePath).toLowerCase();
+    const mimeTypes = {
+      '.html': 'text/html; charset=utf-8',
+      '.js': 'application/javascript; charset=utf-8',
+      '.css': 'text/css; charset=utf-8',
+      '.svg': 'image/svg+xml',
+      '.json': 'application/json',
+      '.png': 'image/png',
+      '.jpg': 'image/jpeg',
+    };
+
+    res.writeHead(200, {
+      'Content-Type': mimeTypes[ext] || 'application/octet-stream',
+    });
+    fs.createReadStream(filePath).pipe(res);
+  });
+
+  server.listen(DEV_PORT, '0.0.0.0', () => {
+    console.log('\n  🔐 TrustVault Frontend Dev Server');
+    console.log(`  ➜  Local:     http://localhost:${DEV_PORT}/`);
+    console.log(`  ➜  API Proxy: http://localhost:${BACKEND_PORT}/`);
+    console.log('  ➜  Ready & watching for changes...\n');
+  });
 } else {
   await esbuild.build(buildOptions);
   console.log('Build completed successfully in dist/');
 }
+
