@@ -141,5 +141,6 @@ if (isWatch) {
 } else {
   await esbuild.build(buildOptions);
   console.log('Build completed successfully in dist/');
+  process.exit(0);
 }
 
