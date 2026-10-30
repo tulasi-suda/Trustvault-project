@@ -121,7 +121,7 @@ export default function AdminAuditLogs() {
       }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <ShieldAlert size={24} color="#10b981" />
+            <ShieldAlert size={24} color="#38bdf8" />
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc' }}>
               Cryptographic Audit Trail & Activity Logs
             </h2>
@@ -151,22 +151,22 @@ export default function AdminAuditLogs() {
         justifyContent: 'space-between',
         flexWrap: 'wrap',
         gap: '1rem',
-        background: 'rgba(6, 17, 13, 0.7)',
+        background: 'rgba(8, 20, 48, 0.7)',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div style={{
             padding: '0.625rem',
             borderRadius: '10px',
-            background: 'rgba(16, 185, 129, 0.15)',
-            border: '1px solid rgba(16, 185, 129, 0.3)',
+            background: 'rgba(37, 99, 235, 0.16)',
+            border: '1px solid rgba(56, 189, 248, 0.3)',
           }}>
-            <ShieldCheck size={24} color="#10b981" />
+            <ShieldCheck size={24} color="#38bdf8" />
           </div>
           <div>
             <p style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#94a3b8', fontWeight: 700 }}>
               Audit Chain Head (Latest SHA-256 Hash)
             </p>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875rem', color: '#34d399', wordBreak: 'break-all' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.875rem', color: '#38bdf8', wordBreak: 'break-all' }}>
               {headHash || 'Genesis (0'.padEnd(64, '0') + ')'}
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function AdminAuditLogs() {
           className="btn btn-secondary btn-sm"
           title="Copy 64-char latest hash"
         >
-          {copiedHead ? <Check size={14} color="#10b981" /> : <Copy size={14} />}
+          {copiedHead ? <Check size={14} color="#38bdf8" /> : <Copy size={14} />}
           <span>{copiedHead ? 'Copied' : 'Copy Head'}</span>
         </button>
       </div>
@@ -187,7 +187,7 @@ export default function AdminAuditLogs() {
         <div style={{ marginBottom: '2rem' }}>
           {verifyResult.ok ? (
             <div className="alert alert-success" style={{ padding: '1rem 1.25rem' }}>
-              <CheckCircle2 size={22} color="#10b981" />
+              <CheckCircle2 size={22} color="#38bdf8" />
               <div>
                 <strong style={{ fontSize: '0.9375rem', display: 'block' }}>
                   Cryptographic Chain Verification Successful
@@ -437,8 +437,8 @@ export default function AdminAuditLogs() {
                         fontWeight: 600,
                         padding: '0.2rem 0.5rem',
                         borderRadius: '4px',
-                        background: 'rgba(16, 185, 129, 0.1)',
-                        color: '#34d399',
+                        background: 'rgba(37, 99, 235, 0.14)',
+                        color: '#38bdf8',
                         fontFamily: 'var(--font-mono)',
                       }}>
                         {log.action}
@@ -452,12 +452,12 @@ export default function AdminAuditLogs() {
                         padding: '0.125rem 0.375rem',
                         borderRadius: '4px',
                         background: log.result === 'success'
-                          ? 'rgba(16, 185, 129, 0.15)'
+                          ? 'rgba(37, 99, 235, 0.18)'
                           : log.result === 'denied'
                           ? 'rgba(239, 68, 68, 0.15)'
                           : 'rgba(245, 158, 11, 0.15)',
                         color: log.result === 'success'
-                          ? '#34d399'
+                          ? '#38bdf8'
                           : log.result === 'denied'
                           ? '#f87171'
                           : '#fbbf24',

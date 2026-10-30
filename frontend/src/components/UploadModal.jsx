@@ -139,7 +139,7 @@ export default function UploadModal({ onClose, onUploaded }) {
           borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-            <UploadCloud size={20} color="#10b981" />
+            <UploadCloud size={20} color="#38bdf8" />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Upload Secure Document</h3>
           </div>
           <button
@@ -163,11 +163,11 @@ export default function UploadModal({ onClose, onUploaded }) {
           <div className="form-group">
             <label className="form-label">Document File (Max 10 MB)</label>
             <div style={{
-              border: '2px dashed rgba(16, 185, 129, 0.25)',
+              border: '2px dashed rgba(56, 189, 248, 0.35)',
               borderRadius: '12px',
               padding: '1.25rem',
               textAlign: 'center',
-              background: 'rgba(6, 17, 13, 0.4)',
+              background: 'rgba(5, 14, 32, 0.45)',
               cursor: 'pointer',
             }}>
               <input
@@ -178,7 +178,7 @@ export default function UploadModal({ onClose, onUploaded }) {
                 accept=".pdf,.txt,.docx,.xlsx,.csv,.png,.jpg,.jpeg"
               />
               <label htmlFor="docFileInput" style={{ cursor: 'pointer', display: 'block' }}>
-                <UploadCloud size={32} color="#10b981" style={{ margin: '0 auto 0.5rem auto' }} />
+                <UploadCloud size={32} color="#38bdf8" style={{ margin: '0 auto 0.5rem auto' }} />
                 <p style={{ fontSize: '0.875rem', fontWeight: 600, color: '#f8fafc' }}>
                   {file ? file.name : 'Click to browse or drop document here'}
                 </p>
@@ -191,7 +191,7 @@ export default function UploadModal({ onClose, onUploaded }) {
 
           {/* Fingerprint preview if computed */}
           {computingHash && (
-            <p style={{ fontSize: '0.8125rem', color: '#34d399', marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.8125rem', color: '#38bdf8', marginBottom: '1rem' }}>
               Computing SHA-256 fingerprint in browser...
             </p>
           )}
@@ -202,13 +202,13 @@ export default function UploadModal({ onClose, onUploaded }) {
               alignItems: 'center',
               justifyContent: 'space-between',
               padding: '0.625rem 0.875rem',
-              background: '#041710',
-              border: '1px solid rgba(16, 185, 129, 0.25)',
+              background: '#040d22',
+              border: '1px solid rgba(56, 189, 248, 0.28)',
               borderRadius: '8px',
               marginBottom: '1.25rem',
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <ShieldCheck size={16} color="#10b981" />
+                <ShieldCheck size={16} color="#38bdf8" />
                 <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Client Fingerprint:</span>
                 <span className="fingerprint-tag">{fingerprint}...</span>
               </div>
@@ -218,7 +218,7 @@ export default function UploadModal({ onClose, onUploaded }) {
                 className="btn btn-secondary btn-sm"
                 title="Copy full 64-char SHA-256"
               >
-                {copiedFingerprint ? <Check size={14} color="#10b981" /> : <Copy size={14} />}
+                {copiedFingerprint ? <Check size={14} color="#38bdf8" /> : <Copy size={14} />}
                 <span>{copiedFingerprint ? 'Copied' : 'Copy'}</span>
               </button>
             </div>
@@ -329,8 +329,8 @@ export default function UploadModal({ onClose, onUploaded }) {
                         marginLeft: '0.5rem',
                         padding: '0.125rem 0.375rem',
                         borderRadius: '4px',
-                        background: recipient.permission === 'edit' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(16, 185, 129, 0.2)',
-                        color: recipient.permission === 'edit' ? '#60a5fa' : '#34d399',
+                        background: recipient.permission === 'edit' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(37, 99, 235, 0.2)',
+                        color: recipient.permission === 'edit' ? '#60a5fa' : '#38bdf8',
                         textTransform: 'uppercase',
                         fontWeight: 700,
                       }}>

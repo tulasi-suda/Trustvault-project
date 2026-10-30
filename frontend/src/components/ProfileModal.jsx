@@ -88,10 +88,10 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '1.25rem 1.5rem',
-          borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
+          borderBottom: '1px solid rgba(56, 189, 248, 0.16)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-            <User size={20} color="#10b981" />
+            <User size={20} color="#38bdf8" />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Account & Profile</h3>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer' }}>
@@ -102,8 +102,8 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
         {/* Tab switch */}
         <div style={{
           display: 'flex',
-          borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
-          background: 'rgba(6, 17, 13, 0.4)',
+          borderBottom: '1px solid rgba(56, 189, 248, 0.16)',
+          background: 'rgba(6, 14, 32, 0.5)',
         }}>
           <button
             onClick={() => setActiveTab('profile')}
@@ -112,8 +112,8 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
               padding: '0.75rem',
               background: 'transparent',
               border: 'none',
-              borderBottom: activeTab === 'profile' ? '2px solid #10b981' : 'none',
-              color: activeTab === 'profile' ? '#34d399' : '#94a3b8',
+              borderBottom: activeTab === 'profile' ? '2px solid #38bdf8' : 'none',
+              color: activeTab === 'profile' ? '#38bdf8' : '#94a3b8',
               fontWeight: 600,
               fontSize: '0.875rem',
               cursor: 'pointer',
@@ -128,8 +128,8 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
               padding: '0.75rem',
               background: 'transparent',
               border: 'none',
-              borderBottom: activeTab === 'password' ? '2px solid #10b981' : 'none',
-              color: activeTab === 'password' ? '#34d399' : '#94a3b8',
+              borderBottom: activeTab === 'password' ? '2px solid #38bdf8' : 'none',
+              color: activeTab === 'password' ? '#38bdf8' : '#94a3b8',
               fontWeight: 600,
               fontSize: '0.875rem',
               cursor: 'pointer',
@@ -191,8 +191,8 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
               <div style={{
                 padding: '0.75rem',
                 borderRadius: '8px',
-                background: 'rgba(6, 17, 13, 0.6)',
-                border: '1px solid rgba(16, 185, 129, 0.1)',
+                background: 'rgba(6, 14, 32, 0.65)',
+                border: '1px solid rgba(56, 189, 248, 0.16)',
                 marginBottom: '1.5rem',
                 fontSize: '0.8125rem',
                 color: '#94a3b8',
@@ -200,7 +200,7 @@ export default function ProfileModal({ user, onClose, onUserUpdated }) {
                 alignItems: 'center',
                 gap: '0.5rem',
               }}>
-                <Shield size={16} color="#10b981" />
+                <Shield size={16} color="#38bdf8" />
                 <span>Account Role: <strong style={{ color: '#f8fafc', textTransform: 'uppercase' }}>{user?.role}</strong></span>
               </div>
 

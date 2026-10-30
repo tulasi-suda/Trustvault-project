@@ -211,7 +211,7 @@ export default function SearchPage({ isAdmin = false }) {
                   <tr key={doc.id}>
                     <td>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                        <FileText size={16} color="#10b981" />
+                        <FileText size={16} color="#38bdf8" />
                         <div>
                           <p style={{ fontWeight: 600, color: '#f8fafc' }}>{doc.title}</p>
                           <p style={{ fontSize: '0.75rem', color: '#64748b' }}>{doc.original_filename}</p>
@@ -229,7 +229,7 @@ export default function SearchPage({ isAdmin = false }) {
                       {new Date(doc.created_at).toLocaleDateString()}
                     </td>
                     <td>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: '#34d399' }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: '#38bdf8' }}>
                         {doc.my_permission}
                       </span>
                     </td>

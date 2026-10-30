@@ -52,8 +52,8 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
       <div className="glass-panel" style={{
         padding: '2rem 2.5rem',
         marginBottom: '2rem',
-        background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 17, 13, 0.8))',
-        border: '1px solid rgba(16, 185, 129, 0.25)',
+        background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(8, 18, 42, 0.85))',
+        border: '1px solid rgba(56, 189, 248, 0.28)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -66,10 +66,10 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
               width: '8px',
               height: '8px',
               borderRadius: '50%',
-              background: '#10b981',
-              boxShadow: '0 0 10px #10b981',
+              background: '#38bdf8',
+              boxShadow: '0 0 10px #38bdf8',
             }} />
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: '#34d399', letterSpacing: '0.05em' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: '#38bdf8', letterSpacing: '0.05em' }}>
               System Integrity Verified
             </span>
           </div>
@@ -110,10 +110,10 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
             <div style={{
               padding: '0.75rem',
               borderRadius: '10px',
-              background: 'rgba(16, 185, 129, 0.1)',
-              border: '1px solid rgba(16, 185, 129, 0.2)',
+              background: 'rgba(37, 99, 235, 0.12)',
+              border: '1px solid rgba(56, 189, 248, 0.22)',
             }}>
-              <FileText size={22} color="#10b981" />
+              <FileText size={22} color="#38bdf8" />
             </div>
           </div>
           <button
@@ -121,7 +121,7 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
             style={{
               background: 'none',
               border: 'none',
-              color: '#34d399',
+              color: '#38bdf8',
               fontSize: '0.8125rem',
               fontWeight: 600,
               cursor: 'pointer',
@@ -150,8 +150,8 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
               <div style={{
                 padding: '0.75rem',
                 borderRadius: '10px',
-                background: 'rgba(59, 130, 246, 0.1)',
-                border: '1px solid rgba(59, 130, 246, 0.2)',
+                background: 'rgba(59, 130, 246, 0.12)',
+                border: '1px solid rgba(59, 130, 246, 0.25)',
               }}>
                 <Share2 size={22} color="#60a5fa" />
               </div>
@@ -183,7 +183,7 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
               <p style={{ fontSize: '0.8125rem', color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase' }}>
                 Audit Integrity
               </p>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#10b981', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#38bdf8', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <CheckCircle2 size={20} />
                 <span>SHA-256 Chained</span>
               </h3>
@@ -191,10 +191,10 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
             <div style={{
               padding: '0.75rem',
               borderRadius: '10px',
-              background: 'rgba(16, 185, 129, 0.1)',
-              border: '1px solid rgba(16, 185, 129, 0.2)',
+              background: 'rgba(37, 99, 235, 0.12)',
+              border: '1px solid rgba(56, 189, 248, 0.22)',
             }}>
-              <ShieldCheck size={22} color="#10b981" />
+              <ShieldCheck size={22} color="#38bdf8" />
             </div>
           </div>
           <p style={{ fontSize: '0.75rem', color: '#64748b' }}>
@@ -207,7 +207,7 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
       <div className="glass-panel" style={{ padding: '1.5rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Clock size={18} color="#10b981" />
+            <Clock size={18} color="#38bdf8" />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#f8fafc' }}>
               Recently Active Documents
             </h3>
@@ -250,7 +250,7 @@ export default function Dashboard({ user, onNavigate, onOpenUpload }) {
                     </td>
                     <td style={{ color: '#94a3b8' }}>{doc.owner_username}</td>
                     <td>
-                      <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: 700, color: '#34d399' }}>
+                      <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: 700, color: '#38bdf8' }}>
                         {doc.my_permission}
                       </span>
                     </td>

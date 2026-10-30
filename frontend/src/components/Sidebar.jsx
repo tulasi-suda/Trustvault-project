@@ -36,8 +36,8 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
   return (
     <aside style={{
       width: '260px',
-      background: 'rgba(8, 20, 16, 0.95)',
-      borderRight: '1px solid rgba(16, 185, 129, 0.15)',
+      background: 'rgba(6, 14, 34, 0.96)',
+      borderRight: '1px solid rgba(56, 189, 248, 0.16)',
       display: 'flex',
       flexDirection: 'column',
       padding: '1.5rem 1rem',
@@ -85,9 +85,9 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
                 padding: '0.625rem 0.875rem',
                 borderRadius: '8px',
                 border: '1px solid',
-                borderColor: isActive ? 'rgba(16, 185, 129, 0.4)' : 'transparent',
-                background: isActive ? 'rgba(16, 185, 129, 0.12)' : 'transparent',
-                color: isActive ? '#34d399' : '#94a3b8',
+                borderColor: isActive ? 'rgba(56, 189, 248, 0.45)' : 'transparent',
+                background: isActive ? 'rgba(37, 99, 235, 0.16)' : 'transparent',
+                color: isActive ? '#38bdf8' : '#94a3b8',
                 fontSize: '0.875rem',
                 fontWeight: isActive ? 600 : 500,
                 cursor: 'pointer',
@@ -96,7 +96,7 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
               }}
               onMouseEnter={e => {
                 if (!isActive) {
-                  e.currentTarget.style.background = 'rgba(16, 185, 129, 0.05)';
+                  e.currentTarget.style.background = 'rgba(56, 189, 248, 0.08)';
                   e.currentTarget.style.color = '#cbd5e1';
                 }
               }}
@@ -107,7 +107,7 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
                 }
               }}
             >
-              <Icon size={18} color={isActive ? '#34d399' : '#64748b'} />
+              <Icon size={18} color={isActive ? '#38bdf8' : '#64748b'} />
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span>{item.label}</span>
                 {item.sub && (
@@ -123,8 +123,8 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
       <div style={{
         marginTop: 'auto',
         padding: '0.875rem',
-        background: 'rgba(6, 17, 13, 0.6)',
-        border: '1px solid rgba(16, 185, 129, 0.1)',
+        background: 'rgba(4, 10, 24, 0.65)',
+        border: '1px solid rgba(56, 189, 248, 0.15)',
         borderRadius: '8px',
         fontSize: '0.75rem',
         color: '#64748b',
@@ -132,8 +132,8 @@ export default function Sidebar({ role, activeTab, onSelectTab, onOpenUpload }) 
         flexDirection: 'column',
         gap: '0.25rem',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#34d399', fontWeight: 600 }}>
-          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10b981' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.375rem', color: '#38bdf8', fontWeight: 600 }}>
+          <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#38bdf8', boxShadow: '0 0 6px #38bdf8' }} />
           Audit Hash Chained
         </div>
         <span>Zero-Trust DB Authorization</span>
