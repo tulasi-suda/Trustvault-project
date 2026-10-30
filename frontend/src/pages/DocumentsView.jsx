@@ -128,7 +128,7 @@ export default function DocumentsView({ scope = 'all', title = 'Documents', isAd
           </div>
         ) : documents.length === 0 ? (
           <div style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-            <FileText size={40} color="#2563eb" style={{ margin: '0 auto 1rem auto', opacity: 0.7 }} />
+            <FileText size={40} color="#059669" style={{ margin: '0 auto 1rem auto', opacity: 0.6 }} />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 600, color: '#f8fafc', marginBottom: '0.5rem' }}>
               No documents found
             </h3>
@@ -167,11 +167,11 @@ export default function DocumentsView({ scope = 'all', title = 'Documents', isAd
                           <div style={{
                             padding: '0.5rem',
                             borderRadius: '8px',
-                            background: 'rgba(37, 99, 235, 0.12)',
-                            border: '1px solid rgba(56, 189, 248, 0.25)',
+                            background: 'rgba(16, 185, 129, 0.1)',
+                            border: '1px solid rgba(16, 185, 129, 0.2)',
                             marginTop: '0.125rem',
                           }}>
-                            <FileText size={18} color="#38bdf8" />
+                            <FileText size={18} color="#10b981" />
                           </div>
                           <div>
                             <p style={{ fontWeight: 600, color: '#f8fafc' }}>{doc.title}</p>
@@ -202,7 +202,7 @@ export default function DocumentsView({ scope = 'all', title = 'Documents', isAd
                             style={{
                               background: 'transparent',
                               border: 'none',
-                              color: copiedId === doc.id ? '#38bdf8' : '#64748b',
+                              color: copiedId === doc.id ? '#10b981' : '#64748b',
                               cursor: 'pointer',
                               padding: '2px',
                             }}
@@ -232,14 +232,14 @@ export default function DocumentsView({ scope = 'all', title = 'Documents', isAd
                           padding: '0.125rem 0.5rem',
                           borderRadius: '4px',
                           background: isOwner
-                            ? 'rgba(37, 99, 235, 0.18)'
+                            ? 'rgba(16, 185, 129, 0.15)'
                             : doc.my_permission === 'edit'
                             ? 'rgba(59, 130, 246, 0.15)'
                             : isAdmin
                             ? 'rgba(245, 158, 11, 0.15)'
                             : 'rgba(148, 163, 184, 0.15)',
                           color: isOwner
-                            ? '#38bdf8'
+                            ? '#34d399'
                             : doc.my_permission === 'edit'
                             ? '#60a5fa'
                             : isAdmin

@@ -96,10 +96,10 @@ export default function ManageAccessModal({ document, onClose, onUpdated }) {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '1.25rem 1.5rem',
-          borderBottom: '1px solid rgba(56, 189, 248, 0.16)',
+          borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-            <Users size={20} color="#38bdf8" />
+            <Users size={20} color="#10b981" />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Manage Document Access</h3>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer' }}>
@@ -184,8 +184,8 @@ export default function ManageAccessModal({ document, onClose, onUpdated }) {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     padding: '0.75rem 1rem',
-                    background: 'rgba(6, 14, 32, 0.65)',
-                    border: '1px solid rgba(56, 189, 248, 0.16)',
+                    background: 'rgba(6, 17, 13, 0.6)',
+                    border: '1px solid rgba(16, 185, 129, 0.12)',
                     borderRadius: '8px',
                   }}
                 >

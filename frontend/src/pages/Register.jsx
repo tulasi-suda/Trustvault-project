@@ -71,28 +71,28 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '1.5rem',
-        background: 'radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.16) 0%, transparent 60%), #030712',
+        background: 'radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 60%), #06110d',
       }}>
         <div className="glass-panel" style={{ maxWidth: '440px', width: '100%', padding: '2.5rem 2rem', textAlign: 'center' }}>
           <div style={{
             width: '56px',
             height: '56px',
             borderRadius: '50%',
-            background: 'rgba(37, 99, 235, 0.15)',
-            border: '2px solid #38bdf8',
+            background: 'rgba(16, 185, 129, 0.15)',
+            border: '2px solid #10b981',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 1.25rem auto',
           }}>
-            <CheckCircle2 size={32} color="#38bdf8" />
+            <CheckCircle2 size={32} color="#10b981" />
           </div>
 
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc', marginBottom: '0.5rem' }}>
             Account Created
           </h2>
           <p style={{ color: '#94a3b8', fontSize: '0.875rem', marginBottom: '1.75rem', lineHeight: 1.6 }}>
-            Your account <strong style={{ color: '#38bdf8' }}>{username}</strong> has been registered successfully with role <strong>user</strong>.
+            Your account <strong style={{ color: '#34d399' }}>{username}</strong> has been registered successfully with role <strong>user</strong>.
           </p>
 
           <button onClick={onSwitchToSignIn} className="btn btn-primary" style={{ width: '100%', padding: '0.75rem' }}>
@@ -110,7 +110,7 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
       alignItems: 'center',
       justifyContent: 'center',
       padding: '1.5rem',
-      background: 'radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.16) 0%, transparent 60%), #030712',
+      background: 'radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 60%), #06110d',
     }}>
       <div className="glass-panel" style={{ maxWidth: '460px', width: '100%', padding: '2.5rem 2rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '1.75rem' }}>
@@ -118,12 +118,12 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
             width: '44px',
             height: '44px',
             borderRadius: '12px',
-            background: 'linear-gradient(135deg, #2563eb, #1e40af)',
+            background: 'linear-gradient(135deg, #10b981, #047857)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 0.75rem auto',
-            boxShadow: '0 0 20px rgba(37, 99, 235, 0.45)',
+            boxShadow: '0 0 20px rgba(16, 185, 129, 0.35)',
           }}>
             <ShieldCheck size={24} color="#ffffff" />
           </div>
@@ -148,7 +148,7 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <label className="form-label">Username</label>
               {username && (
-                <span style={{ fontSize: '0.75rem', color: usernameValid ? '#38bdf8' : '#f87171' }}>
+                <span style={{ fontSize: '0.75rem', color: usernameValid ? '#34d399' : '#f87171' }}>
                   {usernameValid ? '✓ Valid' : '3-30 chars, letters/digits/_'}
                 </span>
               )}
@@ -172,7 +172,7 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <label className="form-label">Email Address</label>
               {email && (
-                <span style={{ fontSize: '0.75rem', color: emailValid ? '#38bdf8' : '#f87171' }}>
+                <span style={{ fontSize: '0.75rem', color: emailValid ? '#34d399' : '#f87171' }}>
                   {emailValid ? '✓ Valid' : 'Invalid email'}
                 </span>
               )}
@@ -215,16 +215,16 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
               marginTop: '0.5rem',
               fontSize: '0.75rem',
             }}>
-              <span style={{ color: passwordLengthValid ? '#38bdf8' : '#64748b' }}>
+              <span style={{ color: passwordLengthValid ? '#34d399' : '#64748b' }}>
                 {passwordLengthValid ? '✓' : '•'} At least 10 chars
               </span>
-              <span style={{ color: passwordLetterValid ? '#38bdf8' : '#64748b' }}>
+              <span style={{ color: passwordLetterValid ? '#34d399' : '#64748b' }}>
                 {passwordLetterValid ? '✓' : '•'} At least 1 letter
               </span>
-              <span style={{ color: passwordNumberValid ? '#38bdf8' : '#64748b' }}>
+              <span style={{ color: passwordNumberValid ? '#34d399' : '#64748b' }}>
                 {passwordNumberValid ? '✓' : '•'} At least 1 number
               </span>
-              <span style={{ color: passwordsMatch ? '#38bdf8' : '#64748b' }}>
+              <span style={{ color: passwordsMatch ? '#34d399' : '#64748b' }}>
                 {passwordsMatch ? '✓' : '•'} Passwords match
               </span>
             </div>
@@ -258,7 +258,7 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
           </button>
         </form>
 
-        <div style={{ marginTop: '1.75rem', textAlign: 'center', paddingTop: '1.25rem', borderTop: '1px solid rgba(56, 189, 248, 0.16)' }}>
+        <div style={{ marginTop: '1.75rem', textAlign: 'center', paddingTop: '1.25rem', borderTop: '1px solid rgba(16, 185, 129, 0.12)' }}>
           <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>
             Already have an account?{' '}
             <button
@@ -266,7 +266,7 @@ export default function Register({ onRegisterSuccess, onSwitchToSignIn }) {
               style={{
                 background: 'none',
                 border: 'none',
-                color: '#38bdf8',
+                color: '#34d399',
                 fontWeight: 600,
                 cursor: 'pointer',
                 textDecoration: 'underline',

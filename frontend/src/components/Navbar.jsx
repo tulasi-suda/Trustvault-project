@@ -35,26 +35,26 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
           width: '36px',
           height: '36px',
           borderRadius: '10px',
-          background: 'linear-gradient(135deg, #2563eb, #1e40af)',
+          background: 'linear-gradient(135deg, #10b981, #047857)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 0 15px rgba(37, 99, 235, 0.45)',
+          boxShadow: '0 0 15px rgba(16, 185, 129, 0.35)',
         }}>
           <ShieldCheck size={20} color="#ffffff" />
         </div>
         <div>
           <span style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#f8fafc' }}>
-            Trust<span style={{ color: '#38bdf8' }}>Vault</span>
+            Trust<span style={{ color: '#34d399' }}>Vault</span>
           </span>
           <span style={{
             fontSize: '0.6875rem',
             marginLeft: '0.5rem',
             padding: '0.125rem 0.375rem',
             borderRadius: '4px',
-            background: 'rgba(56, 189, 248, 0.15)',
-            color: '#38bdf8',
-            border: '1px solid rgba(56, 189, 248, 0.28)',
+            background: 'rgba(16, 185, 129, 0.15)',
+            color: '#34d399',
+            border: '1px solid rgba(16, 185, 129, 0.25)',
             textTransform: 'uppercase',
             fontWeight: 700,
             letterSpacing: '0.05em'
@@ -72,8 +72,8 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
               display: 'flex',
               alignItems: 'center',
               gap: '0.625rem',
-              background: 'rgba(15, 30, 68, 0.7)',
-              border: '1px solid rgba(56, 189, 248, 0.25)',
+              background: 'rgba(17, 41, 32, 0.7)',
+              border: '1px solid rgba(16, 185, 129, 0.2)',
               borderRadius: '9999px',
               padding: '0.25rem 0.75rem 0.25rem 0.375rem',
               cursor: 'pointer',
@@ -84,7 +84,7 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
               width: '32px',
               height: '32px',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #1d4ed8, #38bdf8)',
+              background: 'linear-gradient(135deg, #059669, #10b981)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -103,14 +103,14 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
               right: 0,
               top: 'calc(100% + 0.5rem)',
               width: '230px',
-              background: '#071328',
-              border: '1px solid rgba(56, 189, 248, 0.3)',
+              background: '#0a1b15',
+              border: '1px solid rgba(16, 185, 129, 0.3)',
               borderRadius: '12px',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.75)',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6)',
               padding: '0.5rem',
               zIndex: 1000,
             }}>
-              <div style={{ padding: '0.75rem', borderBottom: '1px solid rgba(56, 189, 248, 0.12)', marginBottom: '0.375rem' }}>
+              <div style={{ padding: '0.75rem', borderBottom: '1px solid rgba(16, 185, 129, 0.12)', marginBottom: '0.375rem' }}>
                 <p style={{ fontSize: '0.875rem', fontWeight: 700, color: '#f8fafc' }}>{user.username}</p>
                 <p style={{ fontSize: '0.75rem', color: '#94a3b8' }}>{user.email}</p>
                 <div style={{ marginTop: '0.375rem' }}>
@@ -120,8 +120,8 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
                     fontWeight: 700,
                     padding: '0.125rem 0.5rem',
                     borderRadius: '9999px',
-                    background: user.role === 'admin' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(37, 99, 235, 0.2)',
-                    color: user.role === 'admin' ? '#fbbf24' : '#38bdf8',
+                    background: user.role === 'admin' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)',
+                    color: user.role === 'admin' ? '#fbbf24' : '#34d399',
                   }}>
                     Role: {user.role}
                   </span>
@@ -147,7 +147,7 @@ export default function Navbar({ user, onOpenProfile, onSignOut }) {
                   cursor: 'pointer',
                   textAlign: 'left',
                 }}
-                onMouseEnter={e => e.currentTarget.style.background = 'rgba(56, 189, 248, 0.12)'}
+                onMouseEnter={e => e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)'}
                 onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
               >
                 <User size={16} />

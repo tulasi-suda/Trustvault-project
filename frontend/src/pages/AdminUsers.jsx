@@ -56,7 +56,7 @@ export default function AdminUsers({ currentUser }) {
     <div className="page-wrapper">
       <div style={{ marginBottom: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Users size={24} color="#38bdf8" />
+          <Users size={24} color="#10b981" />
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#f8fafc' }}>
             System User Management
           </h2>
@@ -83,7 +83,7 @@ export default function AdminUsers({ currentUser }) {
       <div className="glass-panel" style={{ overflow: 'hidden' }}>
         <div style={{
           padding: '1rem 1.5rem',
-          borderBottom: '1px solid rgba(56, 189, 248, 0.16)',
+          borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -137,8 +137,8 @@ export default function AdminUsers({ currentUser }) {
                           fontWeight: 700,
                           padding: '0.125rem 0.5rem',
                           borderRadius: '9999px',
-                          background: u.role === 'admin' ? 'rgba(245, 158, 11, 0.15)' : 'rgba(37, 99, 235, 0.18)',
-                          color: u.role === 'admin' ? '#fbbf24' : '#38bdf8',
+                          background: u.role === 'admin' ? 'rgba(245, 158, 11, 0.15)' : 'rgba(16, 185, 129, 0.15)',
+                          color: u.role === 'admin' ? '#fbbf24' : '#34d399',
                         }}>
                           {u.role}
                         </span>
@@ -150,14 +150,13 @@ export default function AdminUsers({ currentUser }) {
                           gap: '0.375rem',
                           fontSize: '0.75rem',
                           fontWeight: 600,
-                          color: u.is_active ? '#38bdf8' : '#f87171',
+                          color: u.is_active ? '#34d399' : '#f87171',
                         }}>
                           <span style={{
                             width: '6px',
                             height: '6px',
                             borderRadius: '50%',
-                            background: u.is_active ? '#38bdf8' : '#ef4444',
-                            boxShadow: u.is_active ? '0 0 6px #38bdf8' : '0 0 6px #ef4444',
+                            background: u.is_active ? '#10b981' : '#ef4444',
                           }} />
                           {u.is_active ? 'Active' : 'Disabled'}
                         </span>

@@ -48,10 +48,10 @@ export default function EditMetadataModal({ document, onClose, onUpdated }) {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '1.25rem 1.5rem',
-          borderBottom: '1px solid rgba(56, 189, 248, 0.16)',
+          borderBottom: '1px solid rgba(16, 185, 129, 0.15)',
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem' }}>
-            <Edit3 size={20} color="#38bdf8" />
+            <Edit3 size={20} color="#10b981" />
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700 }}>Edit Document Details</h3>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer' }}>

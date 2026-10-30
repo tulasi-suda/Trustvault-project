@@ -68,11 +68,11 @@ export default function CategoriesPage({ isAdmin = false, onOpenUpload }) {
             }}
             onMouseEnter={e => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.55)';
+              e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.5)';
             }}
             onMouseLeave={e => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.borderColor = 'rgba(56, 189, 248, 0.16)';
+              e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.15)';
             }}
           >
             <div>
@@ -80,11 +80,11 @@ export default function CategoriesPage({ isAdmin = false, onOpenUpload }) {
                 display: 'inline-flex',
                 padding: '0.75rem',
                 borderRadius: '12px',
-                background: 'rgba(37, 99, 235, 0.14)',
-                border: '1px solid rgba(56, 189, 248, 0.28)',
+                background: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.25)',
                 marginBottom: '1rem',
               }}>
-                <Folder size={24} color="#38bdf8" />
+                <Folder size={24} color="#10b981" />
               </div>
               <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: '#f8fafc', marginBottom: '0.5rem' }}>
                 {cat.name}
@@ -96,7 +96,7 @@ export default function CategoriesPage({ isAdmin = false, onOpenUpload }) {
 
             <div style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <span className={`badge badge-${cat.id}`}>{cat.name}</span>
-              <span style={{ fontSize: '0.8125rem', color: '#38bdf8', fontWeight: 600 }}>
+              <span style={{ fontSize: '0.8125rem', color: '#34d399', fontWeight: 600 }}>
                 Explore →
               </span>
             </div>
