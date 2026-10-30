@@ -6,7 +6,7 @@ TrustVault is a secure, zero-trust-inspired document-sharing web application eng
 
 ## 🌐 Live Deployment & Demo Credentials
 
-- **Live URL**: [https://trustvault-web.onrender.com](https://trustvault-web.onrender.com) *(Render Web Service)*
+- **Live URL**: [https://trustvault-nzkr.onrender.com](https://trustvault-nzkr.onrender.com)
 - **Default Seeded Admin**:
   - **Email**: ****
   - **Username**: ****
