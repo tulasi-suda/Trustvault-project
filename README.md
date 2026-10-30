@@ -8,9 +8,9 @@ TrustVault is a secure, zero-trust-inspired document-sharing web application eng
 
 - **Live URL**: [https://trustvault-web.onrender.com](https://trustvault-web.onrender.com) *(Render Web Service)*
 - **Default Seeded Admin**:
-  - **Email**: `admin@trustvault.local`
-  - **Username**: `admin`
-  - **Password**: `AdminPass123!`
+  - **Email**: ****
+  - **Username**: ****
+  - **Password**: ***
 - **Sample User Account**:
   - Register a new account via the UI or seed additional test users.
 
